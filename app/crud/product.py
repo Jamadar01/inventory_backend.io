@@ -8,7 +8,7 @@ def get_product(db: Session, product_id: int):
 
 
 def get_products(db: Session, skip: int = 0, limit: int = 100):
-    return db.query(Product).offset(skip).limit(limit).all()
+    return db.query(Product).order_by(Product.id).offset(skip).limit(limit).all()
 
 
 def create_product(db: Session, product: ProductCreate):
