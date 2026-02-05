@@ -24,7 +24,7 @@ def generate_qr_code(product_data: dict) -> str:
                 timeout=10
             )
             response.raise_for_status()
-            img_base64 = base64.b64encode(response.content).decode()
+            img_base64 = response.text.strip()
             return f"data:image/png;base64,{img_base64}"
         except Exception as e:
             print(f"API error, using fallback: {e}")
@@ -58,7 +58,7 @@ def generate_qr_code_simple(text: str) -> str:
                 timeout=10
             )
             response.raise_for_status()
-            img_base64 = base64.b64encode(response.content).decode()
+            img_base64 = response.text.strip()
             return f"data:image/png;base64,{img_base64}"
         except Exception as e:
             return generate_qr_code_free(text)
