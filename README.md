@@ -125,23 +125,6 @@ Automatically falls back to qrserver.com if no API key is set
 
 Downloadable as PNG from frontend
 
-📁 Project Structure
-inventory_backend.io/
-├── app/
-│   ├── api/
-│   ├── crud/
-│   ├── models/
-│   ├── schemas/
-│   ├── utils/
-│   ├── database.py
-│   └── main.py
-├── .env.example
-├── requirements.txt
-├── runtime.txt
-├── Procfile
-├── railway.json
-└── README.md
-
 
 🚢 Deployment (Railway)
 
